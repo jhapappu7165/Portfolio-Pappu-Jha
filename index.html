@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--FONT AWESOME website for icons | 1:31:00-->
+<html>
+  <head>
+    <title>Personal Portfolio [Pappu Jha]</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://kit.fontawesome.com/fea3a3acad.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+
+        <nav>
+          <img src="logo.png" class = 'logo'>
+          <ul id="sidemenu"> <!--unordered list | li enlists items-->
+            <li><a href='#header'>Home</a></li> <!--href='header' scrolls to header section-->
+            <li><a href='#about'>About</a></li>
+            <li><a href='#services'>Services</a></li>
+            <li><a href='#portfolio'>Projects</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+
+          <i class="fas fa-times" onclick="closemenu()"></i>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <img class='pp' src="pp.jpg">
+
+        <div class="header-text">
+          <p>A Multifaceted Learner At Southern Miss</p>
+          <h1>Hey! I'm <span>Pappu Jha</span>, <br>a Computer Science Major</h1>
+        </div>
+      </div>
+    </div>
+
+    <!--about-->
+    <div id = 'about'>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="user.jpg">
+          </div>
+
+          <div class="about-col-2">
+            <h1 class = 'sub-title'>WHO AM I?</h1>
+            <p class="text">Pappu Jha, a Computer Science major at the University of Southern Mississippi, brings a diverse skill set and a passion for learning. He is proficient in programming languages like Python, C++, and Front-End Development (HTML, CSS, and JavaScript). Pappu has demonstrated his programming skills through certifications and hands-on projects, such as creating a C++ program for dormitory management. Recognized as a finalist in the RISE competition and a "Best Delegate" in Model United Nations conferences, he excels in communication and diplomacy. During a gap year, Pappu worked as a tutor and intern, contributing to educational initiatives and environmental causes. Actively involved in the 'Youth Council' under the 'Center for Systems Awareness,' he collaborates on projects promoting compassionate systems in education. As an international student at USM, Pappu continues his journey of self-discovery and academic exploration.</p>
+
+            <div class = 'tab-titles'>
+              <p class = 'tab-links active-link' onclick="opentab('skills')"> Skills</p>
+              <p class = 'tab-links' onclick="opentab('experience')"> Experience</p>
+              <p class = 'tab-links' onclick="opentab('education')"> Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Python</span><br>Intermediate Level</li>
+                <li><span>C++</span><br>Intermediate Level</li>
+                <li><span>Front-End Development</span><br>HTML, CSS,
+                  JavaScript</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>High School Tutor</span><br>Sept 2022 - July 2023 <br> Kathmandu, Nepal <br> <br> ● Tutored learners following A-Level, International Baccalaureate, SEE, and Bridge Course curricula</li>
+                
+                <li><span>Member of Youth Council</span><br>Aug, 2022 - Present <br> Center for Systems Awareness - North Andover, MA, USA <br><br> ● Collaborated on a group project about the implementation of quality education in schools <br> ● Co-hosted online events and shared personal experiences with the organization’s global members </li>
+
+                <li><span>Outreach Intern </span><br>Dec, 2022 - Jul, 2023 <br> Kuhiro Class - Kathmandu, Nepal <br><br>
+                  ● Scrapped data about A-level schools in India for marketing purposes and wrote articles on its website</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>The University of Southern Mississippi</span><br>Bachelor in Computer Science <br> Hattiesburg, MS, USA <br> Expected Graduation: December 2026 <br> CGPA: 4.00</li>
+                
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--services-->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="'sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-brands fa-python"></i>
+            <h2><span class="service-header">Python Development</span></h2><br>
+            <p> Delivering Python programming expertise with a focus on essential concepts, including conditional statements, loops, file handling, arrays, and exceptions. Applying adept knowledge of data structures, including stacks, queues, and linked lists, to tailor solutions for diverse projects. Offering hands-on implementation of Python in real-world applications, showcasing effective and practical problem-solving skills. </p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-c"></i>
+            <h2><span class="service-header">C++ Development</span></h2><br>
+            <p> Proficient in C++ development, encompassing a spectrum of fundamental concepts such as conditionals, loops, arrays, object-oriented programming (OOP), functions, file handling, and pointers. Applied C++ expertise to successfully complete various projects, showcasing a diverse skill set and problem-solving capabilities. Offering C++ development services for projects requiring a strategic and comprehensive approach, with a proven track record of successful implementations. </p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2><span class="service-header">Front-End Development</span></h2><br>
+            <p> Offering expert Front-End Development services with proficiency in HTML, CSS, and JavaScript, providing a seamless blend of creativity and functionality. Specialized in crafting replica webpages of prominent platforms such as YouTube, Handshake, and delivering personalized portfolio websites. Transforming design concepts into interactive and visually captivating web pages for an enhanced user experience. </p>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <!--Projects-->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class = 'sub-title'>Projects</h1>
+        <div class="work-list">
+
+          <div class="work1"> <!--Python-->
+            <a href="https://github.com/jhapappu7165/Juputer-Notebook/blob/main/Python%20Projects.py" target="_blank">
+              <img src="work-1.png">
+            </a>
+
+            <div class="description">
+              <br><h4><u>Basic and Intermediate Level Python</u></h4>
+                <ul>
+                  <br><li>● Integrated college-taught concepts (loops, conditions, if/else) in a project.</li><br>
+                  <li>● Utilized data structures (stacks, queues, linked lists) for efficient data handling.</li><br>
+                  <li>● Designed functions, implemented exception handling, and incorporated random number generation.</li><br>
+                </ul>
+            </div>
+          </div>
+
+          <div class="work2"> <!--C++-->
+            <a href="https://github.com/jhapappu7165/Dorms" target="_blank"> 
+              <img src="work-2.png">
+            </a>
+            
+            <div class="description">
+              <br><h4><u>Regulating College Dormitories Digitally</u></h4>
+              <ul>
+                <br><li>Built a program with more than 600 lines of code incorporating all concepts of C++ Introductory Course.</li><br>
+                <li>To move in & out residents of the college dorm, check in & out visitors, and raise the alarm if the breach of rules is determined.</li><br>
+                <li>Impacting the housing department to perform daily operations and enforce housing conduct among students.</li><br>
+              </ul>  
+            </div>
+          </div>
+
+          <div class="work3"> <!--Front-End-->
+            <a href="https://github.com/jhapappu7165/YouTube-Clone" target="_blank">
+              <img src="work-3.png">
+            </a>
+            
+            <div class="description">
+              <br><h4><u>YouTube Clone Webpage</u></h3>
+                <ul>
+                  <br><li>Crafted a clone webpage of a popular website (YouTube) using HTML and CSS.</li><br>
+                  <li>Showcased creative and technical skills in web development.</li><br>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--contact-->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            
+            <p><i class="fa-solid fa-envelope"></i>jhapappu7165@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+1 (601) 329-1171</p>
+            <p><i class="fa-solid fa-envelope"></i>pappu.jha@usm.edu</p>
+
+            <div class="social-icons">
+              <a href="https://www.facebook.com/pappu.jha.543/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/jhapappu7165/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/pappujha2004/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/jhapappu7165" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <button class="button">
+              <a href="Resume [Pappu Jha].pdf" download>Download Resume <i class="fa-solid fa-download"></i></a>
+            </button>
+
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2024 Pappu. All rights reserved.</p>
+      </div>
+    </div>
+
+
+    <script>
+      var tablinks = document.getElementsByClassName('tab-links');
+      var tabcontents = document.getElementsByClassName('tab-contents');
+      
+      function opentab(tabname){
+        for (tablink of tablinks){
+          tablink.classList.remove('active-link');
+        }
+        for (tabcontent of tabcontents){
+          tabcontent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+    </script>
+    <form name="submit-to-google-sheet"></form>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOjo8Sn1xsJAi2hRdN3YojUuNKivQO_3MeylTMyBpXeqT20nLJDbrjmHQIlRzDmsb/exec'
+      const form = document.forms['submit-to-google-sheet']
+      
+      const msg =document.getElementById('msg')
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+          }
+          
+        )
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      
+      function openmenu(){
+        sidemenu.style.right = '0';
+      }
+      function closemenu(){
+        sidemenu.style.right = '-200px';
+      }
+
+    </script>
+  </body>
+</html>

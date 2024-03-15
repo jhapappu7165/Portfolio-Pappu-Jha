@@ -1,0 +1,504 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: white;
+}
+
+#header{
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.png);
+  background-size: cover;
+}
+
+.container {
+  padding: 10px 10%; 
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo{
+  width: 140px; 
+}
+
+nav ul li {
+ display: inline-block;
+ list-style: none;
+ margin: 10px 20px; 
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 11%;
+  font-size: 30px;
+}
+
+.header-text h1{
+  font-size: 60px;
+  margin-top: 2%;
+}
+
+.header-text h1 span {
+  color: #ec3752;
+}
+
+.pp{
+  margin-top: 5px;
+  width: 150px;
+  height:150px;
+  margin-right: 50px;
+}
+
+/*ABOUT*/
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap; 
+}
+
+.about-col-1 {
+  flex-basis: 35%; /*width*/
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%; /*width*/
+}
+
+.sub-title{
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.text{
+  color: white;
+  line-height: 23px;
+  font-size: 17px;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 180px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+}
+
+.tab-links::after{
+  content: "";
+  width: 0;  /*width 0 in general case*/
+  height: 3px;
+  background: #00ff11;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: 0.5s;
+}
+
+/*active-link determines which tab is active*/
+.tab-links.active-link::after{ 
+  width: 100%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #ff0303;
+  font-size: 16px;
+}
+
+.tab-contents{
+  display: none; /*first, hide all of 3 sections*/
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+
+/*---services-------*/
+#services { /*it is "id", not class, so "#" is used instead of "."*/
+  padding: 60px 0;
+}
+
+.services-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px; 
+}
+
+.service-header{
+  color: white;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 40px;
+  transition: backgrund 0.5s, transform 0.5s; /*transition upon hovering*/
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.services-list div p {
+  font-size: 15px;
+}
+
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px); /*move the box up by 10px upon hovering*/
+}
+
+
+/*--------------projects---------*/
+#portfolio{
+  padding: 50px 0;
+}
+
+.work-list{
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-gap: 110px;
+  margin-top: 50px; 
+  height: 500px;
+}
+
+.work1,
+.work2
+.work3{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work2 img,
+.work1 img{
+  width: 100%;
+  height: 20%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  transition: 2.0s;
+}
+
+.work3 img{
+  height: 20%;
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: 2.0s;
+}
+
+.work-list div:hover {/*move the box up by 10px upon hovering*/
+  transform: translateY(-10px); 
+}
+
+.work1:hover img,
+.work2:hover img,
+.work3:hover img {
+  transform: scale(1.1);
+}
+
+.work1 a h3,
+.work2 a h3,
+.work3 a h3 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 100px;
+  color: red;
+}
+
+.description:hover{
+  background-color: #ec3752;
+  margin-top: 20px;
+}
+
+/*------------contact------------*/
+
+#contact{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.contact-left{
+  flex-basis: 35%;
+}
+
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top: 30px;
+}
+
+.contact-left p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 38px;
+  color: #ababab;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.button{
+  padding: 12px 20px;
+  background: #ff004f;
+  border: none;
+  border-radius: 0px;
+  margin-top: 70px;
+  transition: 0.5s;
+  color: white;
+}
+
+.button a{
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.button a i {
+  color: white;
+}
+
+.button:hover{
+  transform: translateY(-5px);
+  background-color: rgb(255, 0, 79, 0.5);
+}
+
+.contact-right form{
+  width: 100%;
+}
+
+form input, form textarea {/*form is a tag, not a class, so . not used*/
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: text;
+}
+
+.btn{
+  padding: 14px 60px;
+  background: #ff004f;
+  border: none;
+  border-radius: 10px;
+  margin-top: 70px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  background-color: rgb(255, 0, 79, 0.5);
+}
+
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #262626;
+  margin-top: 140px;
+  bottom: 0;
+}
+
+/*----css for small screens---------*/
+/*below properties applicable when Screen_Width<=600*/
+
+
+nav .fas {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+  #header{
+    background-image: url(images/phone-background.jpg);
+  }
+  .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 13px;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: 0.5s;
+  }
+ 
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    right: 155px;
+    cursor: pointer;
+  }
+  .fa-bars{
+    right: 125px;
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .header-text{
+    margin-top: 170px;
+    width: 240px;
+  }
+
+  .header-text p{
+    font-size: 17px;
+    background: blue;
+  }
+  
+  .header-text h1{
+    font-size: 20px;
+    margin-top: 30px;
+    background: blue;
+  }
+
+  .work-list{
+    grid-template-columns: 1fr;
+    grid-gap: 0px; 
+    height: auto; 
+    margin-top: 10px; 
+  }
+
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+
+  .copyright{
+    font-size: 14px;
+  }
+}
+
+
+#msg {
+  color: #61b752;
+  margin-top: 20px;
+  display: block;
+}
