@@ -25,12 +25,20 @@
           <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
 
-        <img class='pp' src="pp.jpg">
 
         <div class="header-text">
           <p>A Multifaceted Learner At Southern Miss</p>
           <h1>Hey! I'm <span>Pappu Jha</span>, <br>a Computer Science Major</h1>
+
+          <h6>
+            <span class="ds">Data Science</span> | 
+            <span class="ml">Machine Learning</span>
         </div>
+          
+        <div class="div-pp">
+          <img class='pp' src="pp.jpg">
+        </div>
+
       </div>
     </div>
 
@@ -44,7 +52,9 @@
 
           <div class="about-col-2">
             <h1 class = 'sub-title'>WHO AM I?</h1>
-            <p class="text">Pappu Jha, a Computer Science major at the University of Southern Mississippi, brings a diverse skill set and a passion for learning. He is proficient in programming languages like Python, C++, and Front-End Development (HTML, CSS, and JavaScript). Pappu has demonstrated his programming skills through certifications and hands-on projects, such as creating a C++ program for dormitory management. Recognized as a finalist in the RISE competition and a "Best Delegate" in Model United Nations conferences, he excels in communication and diplomacy. During a gap year, Pappu worked as a tutor and intern, contributing to educational initiatives and environmental causes. Actively involved in the 'Youth Council' under the 'Center for Systems Awareness,' he collaborates on projects promoting compassionate systems in education. As an international student at USM, Pappu continues his journey of self-discovery and academic exploration.</p>
+            <p class="text">
+              Pappu is a junior at the University of Southern Mississippi (USM) with a major in Computer Science and minor in Economic Data Analysis. His interests lie in solving problems using Machine Learning/Artificial Intelligence. He is proficient in various programming languages including Python and C++. He is pursuing research in Data Science where he develops machine learning models to understand, interpret, and solve real-world challenges. He is well-acquainted with Excel, Object Oriented Programming (OOP), and SQL. He has taken a number of important courses including Data Structure & Algorithm, Operating System, Software Development, etc. Connect with him to explore potential collaboration and develop mutual connection!
+              </p>
 
             <div class = 'tab-titles'>
               <p class = 'tab-links active-link' onclick="opentab('skills')"> Skills</p>
@@ -54,27 +64,27 @@
 
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Python</span><br>Intermediate Level</li>
-                <li><span>C++</span><br>Intermediate Level</li>
-                <li><span>Front-End Development</span><br>HTML, CSS,
-                  JavaScript</li>
+                <li><span>Data Science</span><br>Python, Pandas, NumPy, Exploratory Data Analysis, Visualization, Machine Learning
+                  (Random Forrest, Logistic Regression, Naive Bayes etc.), SQL, Statistics, Microsoft Office (Excel, Access)</li>
+                <li><span>Programming</span><br>Web Development (HTML, CSS, WordPress), C++, C# (MAUI)</li>
+                <li><span>Spoken Languages</span><br>English (Fluent), Nepali, Maithili (Native), Hindi</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>High School Tutor</span><br>Sept 2022 - July 2023 <br> Kathmandu, Nepal <br> <br> ● Tutored learners following A-Level, International Baccalaureate, SEE, and Bridge Course curricula</li>
+                <li><span>Undergraduate Student Researcher</span><br>Sept 2024 – Present <br> Hattiesburg, MS <br> <br> ● Assessed password strength meters using adversarial techniques, aligned methods with 10+ cybersecurity studies, and built ML models that improved weak password detection by 20%.</li>
                 
-                <li><span>Member of Youth Council</span><br>Aug, 2022 - Present <br> Center for Systems Awareness - North Andover, MA, USA <br><br> ● Collaborated on a group project about the implementation of quality education in schools <br> ● Co-hosted online events and shared personal experiences with the organization’s global members </li>
+                <li><span>Web Producer</span><br>Oct, 2024 - Present <br> Roy Howard Community Journalism Center - Hattiesburg, MS <br><br> ● Managed the organization’s website using SNO WordPress, increasing engagement and traffic by 30% through improved layout, interactive content, and SEO with targeted keywords and images. </li>
 
-                <li><span>Outreach Intern </span><br>Dec, 2022 - Jul, 2023 <br> Kuhiro Class - Kathmandu, Nepal <br><br>
-                  ● Scrapped data about A-level schools in India for marketing purposes and wrote articles on its website</li>
+                <li><span>Data Analyst Intern </span><br>Dec, 2022 - Jul, 2023 <br> Kuhiro Class - Kathmandu, Nepal <br><br>
+                  ● Collected and analyzed A-level school data in South Asia using Excel, acquiring 100 customers through targeted marketing, and published articles that increased website readership by 25%.</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>The University of Southern Mississippi</span><br>Bachelor in Computer Science <br> Hattiesburg, MS, USA <br> Expected Graduation: December 2026 <br> CGPA: 4.00</li>
+                <li><span>The University of Southern Mississippi</span><br>BS in Computer Science and Economic Data Analysis (Minor) <br> Hattiesburg, MS, United States of America <br> Expected Graduation: December 2026 <br> CGPA: 4.0/4.0</li>
                 
               </ul>
             </div>
@@ -217,57 +227,9 @@
     </div>
 
 
-    <script>
-      var tablinks = document.getElementsByClassName('tab-links');
-      var tabcontents = document.getElementsByClassName('tab-contents');
-      
-      function opentab(tabname){
-        for (tablink of tablinks){
-          tablink.classList.remove('active-link');
-        }
-        for (tabcontent of tabcontents){
-          tabcontent.classList.remove('active-tab');
-        }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-
-    </script>
+    <script src="script.js"></script>
     <form name="submit-to-google-sheet"></form>
     
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOjo8Sn1xsJAi2hRdN3YojUuNKivQO_3MeylTMyBpXeqT20nLJDbrjmHQIlRzDmsb/exec'
-      const form = document.forms['submit-to-google-sheet']
-      
-      const msg =document.getElementById('msg')
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-              msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-          }
-          
-        )
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-      
-      function openmenu(){
-        sidemenu.style.right = '0';
-      }
-      function closemenu(){
-        sidemenu.style.right = '-200px';
-      }
-
-    </script>
   </body>
 </html>
