@@ -5,6 +5,7 @@
     <title>Personal Portfolio [Pappu Jha]</title>
     <link rel = "stylesheet" href = "style.css">
     <script src="https://kit.fontawesome.com/fea3a3acad.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -23,12 +24,16 @@
 
           <i class="fas fa-times" onclick="closemenu()"></i>
           <i class="fas fa-bars" onclick="openmenu()"></i>
+
         </nav>
+        <div class="div-mode">
+          <button id="mode">Toggle Mode</button>
+        </div>
 
 
         <div class="header-text">
           <p>A Multifaceted Learner At Southern Miss</p>
-          <h1>Hey! I'm <span>Pappu Jha</span>, <br>a Computer Science Major</h1>
+          <h1 class="typewriter">Welcome! I'm <span>PAPPU JHA</span>, <br>a Computer Science Major</h1>
 
           <h6>
             <span class="ds">Data Science</span> | 
@@ -43,7 +48,7 @@
     </div>
 
     <!--about-->
-    <div id = 'about'>
+    <div id = 'about' data-aos="fade-left" data-aos-duration="2500">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
@@ -57,34 +62,34 @@
               </p>
 
             <div class = 'tab-titles'>
-              <p class = 'tab-links active-link' onclick="opentab('skills')"> Skills</p>
-              <p class = 'tab-links' onclick="opentab('experience')"> Experience</p>
-              <p class = 'tab-links' onclick="opentab('education')"> Education</p>
+              <p class = 'tab-links active-link' onclick="opentab('skills')"><b>Skills</b></p>
+              <p class = 'tab-links' onclick="opentab('experience')"> <b>Experience</b></p>
+              <p class = 'tab-links' onclick="opentab('education')"> <b>Education</b></p>
             </div>
 
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Data Science</span><br>Python, Pandas, NumPy, Exploratory Data Analysis, Visualization, Machine Learning
+                <li><span><b>Data Science</b></span><br>Python, Pandas, NumPy, Exploratory Data Analysis, Visualization, Machine Learning
                   (Random Forrest, Logistic Regression, Naive Bayes etc.), SQL, Statistics, Microsoft Office (Excel, Access)</li>
-                <li><span>Programming</span><br>Web Development (HTML, CSS, WordPress), C++, C# (MAUI)</li>
-                <li><span>Spoken Languages</span><br>English (Fluent), Nepali, Maithili (Native), Hindi</li>
+                <li><span><b>Programming</b></span><br>Web Development (HTML, CSS, WordPress), C++, C# (MAUI)</li>
+                <li><span><b>Spoken Languages</b></span><br>English (Fluent), Nepali, Maithili (Native), Hindi</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>Undergraduate Student Researcher</span><br>Sept 2024 – Present <br> Hattiesburg, MS <br> <br> ● Assessed password strength meters using adversarial techniques, aligned methods with 10+ cybersecurity studies, and built ML models that improved weak password detection by 20%.</li>
+                <li><span><b>Undergraduate Student Researcher</b></span><br>Sept 2024 – Present <br> Cyber Innovation Lab - Hattiesburg, MS <br> <br> ● Assessed password strength meters using adversarial techniques, aligned methods with 10+ cybersecurity studies, and built ML models that improved weak password detection by 20%.</li>
                 
-                <li><span>Web Producer</span><br>Oct, 2024 - Present <br> Roy Howard Community Journalism Center - Hattiesburg, MS <br><br> ● Managed the organization’s website using SNO WordPress, increasing engagement and traffic by 30% through improved layout, interactive content, and SEO with targeted keywords and images. </li>
+                <li><span><b>Web Producer</b></span><br>Oct, 2024 - Present <br> Roy Howard Community Journalism Center - Hattiesburg, MS <br><br> ● Managed the organization’s website using SNO WordPress, increasing engagement and traffic by 30% through improved layout, interactive content, and SEO with targeted keywords and images. </li>
 
-                <li><span>Data Analyst Intern </span><br>Dec, 2022 - Jul, 2023 <br> Kuhiro Class - Kathmandu, Nepal <br><br>
+                <li><span><b>Data Analyst Intern </b></span><br>Dec, 2022 - Jul, 2023 <br> Kuhiro Class - Kathmandu, Nepal <br><br>
                   ● Collected and analyzed A-level school data in South Asia using Excel, acquiring 100 customers through targeted marketing, and published articles that increased website readership by 25%.</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>The University of Southern Mississippi</span><br>BS in Computer Science and Economic Data Analysis (Minor) <br> Hattiesburg, MS, United States of America <br> Expected Graduation: December 2026 <br> CGPA: 4.0/4.0</li>
+                <li><span><b> The University of Southern Mississippi </b></span><br><br>BS in Computer Science and Economic Data Analysis (Minor) <br> Hattiesburg, MS, United States of America <br> Expected Graduation: December 2026 <br> CGPA: 4.0/4.0</li>
                 
               </ul>
             </div>
@@ -94,28 +99,29 @@
       </div>
     </div>
 
+    
     <!--services-->
 
-    <div id="services">
+    <div id="services" data-aos="fade-right" data-aos-duration="2500">
       <div class="container">
         <h1 class="'sub-title">My Services</h1>
         <div class="services-list">
           <div>
-            <i class="fa-brands fa-python"></i>
-            <h2><span class="service-header">Python Development</span></h2><br>
-            <p> Delivering Python programming expertise with a focus on essential concepts, including conditional statements, loops, file handling, arrays, and exceptions. Applying adept knowledge of data structures, including stacks, queues, and linked lists, to tailor solutions for diverse projects. Offering hands-on implementation of Python in real-world applications, showcasing effective and practical problem-solving skills. </p>
+            <i class="fa-solid fa-hexagon-nodes"></i>
+            <h2><span class="service-header">Machine Learning Development</span></h2><br>
+            <p> I develop machine learning models with a focus on real-world applications like password strength estimation in cybersecurity. My work includes training and testing models, analyzing data, and improving performance using machine learning techniques like Random Forest, Logistic Regression, Naive Bayes, Decision Tree, XGBoost, etc. </p>
           </div>
 
           <div>
-            <i class="fa-solid fa-c"></i>
-            <h2><span class="service-header">C++ Development</span></h2><br>
-            <p> Proficient in C++ development, encompassing a spectrum of fundamental concepts such as conditionals, loops, arrays, object-oriented programming (OOP), functions, file handling, and pointers. Applied C++ expertise to successfully complete various projects, showcasing a diverse skill set and problem-solving capabilities. Offering C++ development services for projects requiring a strategic and comprehensive approach, with a proven track record of successful implementations. </p>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h2><span class="service-header">Data Science</span></h2><br>
+            <p> I offer Data Science services focused on turning raw data into meaningful insights. I work with tools like Python, Pandas, and Matplotlib to clean, analyze, and visualize data. My experience includes exploring trends, identifying patterns, and presenting findings in a clear and useful way. Whether it’s for research or real-world projects, I enjoy making data tell a story. </p>
           </div>
 
           <div>
             <i class="fa-solid fa-code"></i>
             <h2><span class="service-header">Front-End Development</span></h2><br>
-            <p> Offering expert Front-End Development services with proficiency in HTML, CSS, and JavaScript, providing a seamless blend of creativity and functionality. Specialized in crafting replica webpages of prominent platforms such as YouTube, Handshake, and delivering personalized portfolio websites. Transforming design concepts into interactive and visually captivating web pages for an enhanced user experience. </p>
+            <p> I offer expert Front-End Development services using HTML, CSS, JavaScript, C#, and WordPress. I create clean, responsive websites that look great and work smoothly. I specialize in building replica pages of popular platforms like YouTube and Handshake, as well as custom portfolio websites. I turn design ideas into interactive, user-friendly web pages.</p>
           </div>
           
           
@@ -124,7 +130,7 @@
     </div>
 
     <!--Projects-->
-    <div id="portfolio">
+    <div id="portfolio" data-aos="fade-left" data-aos-duration="2500">
       <div class="container">
         <h1 class = 'sub-title'>Projects</h1>
         <div class="work-list">
@@ -179,7 +185,7 @@
 
 
     <!--contact-->
-    <div id="contact">
+    <div id="contact" data-aos="fade-right" data-aos-duration="2500">
       <div class="container">
         <div class="row">
 
@@ -187,16 +193,9 @@
             <h1 class="sub-title">Contact Me</h1>
             
             <p><i class="fa-solid fa-envelope"></i>jhapappu7165@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i>+1 (601) 329-1171</p>
             <p><i class="fa-solid fa-envelope"></i>pappu.jha@usm.edu</p>
 
             <div class="social-icons">
-              <a href="https://www.facebook.com/pappu.jha.543/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="https://www.instagram.com/jhapappu7165/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
               <a href="https://www.linkedin.com/in/pappujha2004/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
@@ -206,7 +205,7 @@
             </div>
 
             <button class="button">
-              <a href="Resume [Pappu Jha].pdf" download>Download Resume <i class="fa-solid fa-download"></i></a>
+              <a href="Curriculum_Vitae_Pappu_Jha.pdf" download>Download CV <i class="fa-solid fa-download"></i></a>
             </button>
 
           </div>
@@ -227,7 +226,15 @@
     </div>
 
 
+
+
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
     <form name="submit-to-google-sheet"></form>
     
 

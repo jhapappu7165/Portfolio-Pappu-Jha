@@ -45,3 +45,11 @@ function openmenu(){
 function closemenu(){
   sidemenu.style.right = '-200px';
 }
+
+
+
+button = document.getElementById("mode");
+
+button.onclick = function() {
+  document.body.classList.toggle("light-mode");
+};
