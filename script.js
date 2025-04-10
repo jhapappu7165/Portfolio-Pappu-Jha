@@ -53,3 +53,25 @@ button = document.getElementById("mode");
 button.onclick = function() {
   document.body.classList.toggle("light-mode");
 };
+
+
+
+var project1 = document.getElementsByClassName('project1')[0];
+
+project1.addEventListener('click', function() {
+  window.open("https://github.com/jhapappu7165/Adversarial-ML-Password-Classification", "_blank");
+})
+
+
+var project2 = document.getElementsByClassName('project2')[0];
+
+project2.addEventListener('click', function() {
+  window.open("https://smttt-my.sharepoint.com/:w:/g/personal/w10168315_usm_edu/EX4N5dstDoFJkUWUMlo-x8cBbh6UBUYJhXzT9mssadefAQ", "_blank");
+})
+
+
+var project3 = document.getElementsByClassName('project3')[0];
+
+project3.addEventListener('click', function() {
+  window.open("https://github.com/jhapappu7165/Dormitory-Operations-with-C-plus-plus", "_blank");
+})
