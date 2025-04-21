@@ -116,6 +116,10 @@ nav ul li a:hover::after {
   color: black;
 }
 
+.header-text p {
+  margin-bottom: 40px;
+}
+
 .header-text p span {
   color: red;
 }
@@ -521,8 +525,6 @@ nav .fa-times
 @media only screen and (max-width: 768px)
 {
   .header-text {
-    margin-top: 20%;
-    margin-bottom: 15px;
     font-size: 18px;
     padding: 0 10px;
     text-align: center;
@@ -530,7 +532,7 @@ nav .fa-times
 
   .header-text p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin: 60px 0;
   }
 
   .header-text h1 {
@@ -548,7 +550,7 @@ nav .fa-times
     width: 90%;
     height: 45px;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 70px;
   }
 
   .social-icons {
