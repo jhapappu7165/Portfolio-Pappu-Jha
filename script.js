@@ -15,6 +15,24 @@ function opentab(tabname){
 
 
 
+let navLinks = document.getElementById("sidemenu");
+
+function openmenu() {
+  navLinks.style.right = "0";
+}
+
+function closemenu() {
+  navLinks.style.right = "-200px";
+}
+
+const navItems = navLinks.querySelectorAll("li a"); 
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    closemenu();
+  });
+});
+
+
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOjo8Sn1xsJAi2hRdN3YojUuNKivQO_3MeylTMyBpXeqT20nLJDbrjmHQIlRzDmsb/exec';
 const form = document.forms['submit-to-google-sheet']
