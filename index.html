@@ -3,7 +3,14 @@
 <html>
   <head>
     <title>Pappu Jha</title>
-
+    
+    <script>
+      if (window.location.protocol !== 'https:') 
+      {
+        window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+      }
+    </script>
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
