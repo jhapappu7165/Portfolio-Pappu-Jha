@@ -402,10 +402,6 @@ nav ul li a:hover::after {
   font-size: 18px;
 }
 
-.project-list div h1:hover {
-  text-decoration: underline;
-}
-
 .project-list div:hover {
   background: #ff004f;
   transform: translateY(-10px); /*move the box up by 10px upon hovering*/
