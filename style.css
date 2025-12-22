@@ -239,6 +239,7 @@ nav ul li a:hover::after {
   font-weight: 600;
   color: white;
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .text{
@@ -299,6 +300,48 @@ nav ul li a:hover::after {
   display: block;
 }
 
+/*---TEDx Video Section-------*/
+#tedx {
+  padding: 80px 0;
+  text-align: center;
+}
+
+#tedx .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tedx .sub-title {
+  text-align: center;
+  width: 100%;
+  align-self: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(255, 0, 79, 0.3);
+  background: linear-gradient(135deg, rgba(255, 0, 79, 0.1) 0%, rgba(38, 38, 38, 0.3) 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(255, 0, 79, 0.5);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 0, 79, 0.2);
+}
 
 /*---services-------*/
 #expertise { /*it is "id", not class, so "#" is used instead of "."*/
@@ -355,11 +398,35 @@ nav ul li a:hover::after {
   padding: 60px 0;
 }
 
+
+.project-scroll-container {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+}
+
 .project-list{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px; 
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: auto; /* Changed to auto - we handle smoothness in JS */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 10px 60px;
+  margin: 0;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  will-change: scroll-position; /* Optimize for smooth scrolling */
+}
+
+.project-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.project-list > div {
+  flex: 0 0 auto;
+  min-width: 350px;
+  max-width: 350px;
 }
 
 .project-header{
@@ -398,13 +465,54 @@ nav ul li a:hover::after {
 
 .project2 ul li,
 .project3 ul li,
-.project1 ul li {
+.project1 ul li,
+.project4 ul li,
+.project5 ul li,
+.project6 ul li {
   font-size: 18px;
 }
 
 .project-list div:hover {
   background: #ff004f;
   transform: translateY(-10px); /*move the box up by 10px upon hovering*/
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 0, 79, 0.8);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-btn:hover {
+  background: rgba(255, 0, 79, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 0, 79, 0.5);
+}
+
+.scroll-btn-left {
+  left: -25px;
+}
+
+.scroll-btn-right {
+  right: -25px;
+}
+
+.scroll-btn i {
+  color: white;
 }
 
 /*------------contact------------*/
@@ -655,11 +763,52 @@ nav .fa-times
     margin-right: 20px;
   }
 
+  #tedx {
+    padding: 40px 0;
+  }
+
+  .video-wrapper {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .video-wrapper iframe {
+    border-width: 2px;
+  }
+
   .work-list{
     grid-template-columns: 1fr;
     grid-gap: 0px; 
     height: auto; 
     margin-top: 10px; 
+  }
+
+  .project-scroll-container {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .project-list {
+    padding: 10px 50px;
+  }
+
+  .project-list > div {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .scroll-btn-left {
+    left: -15px;
+  }
+
+  .scroll-btn-right {
+    right: -15px;
   }
 
   .contact-left, .contact-right{
